@@ -96,6 +96,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       companies = companies2;
     } else if (set === "3") {
       companies = companies3;
+    } else if (set === "4") {
+      companies = companies4;
+    } else if (set === "5") {
+      companies = companies5;
+    } else if (set === "6") {
+      companies = companies6;
+    } else if (set === "7") {
+      companies = companies7;
     } else {
       console.log("Invalid company type");
       throw new Error("Invalid company type");
@@ -146,6 +154,8 @@ const companies1: CompanySearch[] = [
     url:
       "https://www.sec.gov/edgar/search/#/q=bitcoin&dateRange=30d&ciks=0001652044&entityName=Alphabet%2520Inc.%2520(GOOG%252C%2520GOOGL)%2520(CIK%25200001652044)",
   },
+];
+const companies2: CompanySearch[] = [
   {
     name: "AMZN",
     url:
@@ -158,7 +168,7 @@ const companies1: CompanySearch[] = [
   },
 ];
 
-const companies2: CompanySearch[] = [
+const companies3: CompanySearch[] = [
   {
     name: "ORCL",
     url:
@@ -169,6 +179,8 @@ const companies2: CompanySearch[] = [
     url:
       "https://www.sec.gov/edgar/search/#/q=bitcoin&dateRange=30d&ciks=0001418091&entityName=TWITTER%252C%2520INC.%2520(TWTR)%2520(CIK%25200001418091)",
   },
+];
+const companies4: CompanySearch[] = [
   {
     name: "NFLX",
     url:
@@ -181,7 +193,7 @@ const companies2: CompanySearch[] = [
   },
 ];
 
-const companies3: CompanySearch[] = [
+const companies5: CompanySearch[] = [
   {
     name: "VISA",
     url:
@@ -192,6 +204,8 @@ const companies3: CompanySearch[] = [
     url:
       "https://www.sec.gov/edgar/search/#/q=bitcoin&dateRange=30d&ciks=0000104169&entityName=Walmart%2520Inc.%2520(WMT)%2520(CIK%25200000104169)",
   },
+];
+const companies6: CompanySearch[] = [
   {
     name: "DIS",
     url:
@@ -202,6 +216,8 @@ const companies3: CompanySearch[] = [
     url:
       "https://www.sec.gov/edgar/search/#/q=bitcoin&dateRange=30d&ciks=0000200406&entityName=JOHNSON%2520%2526%2520JOHNSON%2520(JNJ)%2520(CIK%25200000200406)",
   },
+];
+const companies7: CompanySearch[] = [
   {
     name: "TENC",
     url:
