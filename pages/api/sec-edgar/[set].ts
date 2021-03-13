@@ -6,7 +6,7 @@ import { sendLog, sendMessage } from "~/libs/telegram";
 import { CompanyResult, CompanySearch, ResultToTextInput } from "~/src/types";
 import { CHILE_TIME, CHUNK_ARRAY } from "~/src/utils";
 
-const TIMEOUT_FOR_EACH_RESULT = 1800; // ms
+const TIMEOUT_FOR_EACH_RESULT = 800; // ms
 const CONCURRENCY = 2;
 const LOCAL = false; // !process.env.VERCEL;
 
