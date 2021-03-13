@@ -33,7 +33,8 @@ const getSecEdgarResults = async ({ name, url }): Promise<CompanyResult> => {
     if (err.name === "TimeoutError") {
       return { name, url, status: "quiet" };
     }
-    console.log(`Error for company ${name}: ${err}`);
+    console.log(`Error for company ${name}\n${err}`);
+    await sendLog({ text: `Error for company ${name}\n<pre>${err}</pre>`, silent: false });
     return { name, url, status: "error" };
   }
 };
